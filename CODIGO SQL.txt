@@ -1,0 +1,92 @@
+create database db_hefesto;
+use db_hefesto;
+
+create table compromisso(
+/*idcompromisso long,*/
+idcompromisso bigint,
+nome varchar(80),
+data_marcada date,
+horario time,
+descricao text,
+endereco text,
+cidade varchar(80),
+uf varchar(80),
+urgencia varchar(30),
+situacao varchar(30),
+primary key (idcompromisso));
+
+truncate table compromisso;
+
+
+select * from cliente
+order by idcliente;
+
+select * from compromisso
+order by idcompromisso;
+
+create table cliente(
+idcliente bigint,
+nome varchar(80),
+rg varchar(20),
+cpf varchar(20),
+endereco text,
+cidade varchar(80),
+uf varchar(80),
+telefone varchar(30),
+telefone2 varchar(30),
+primary key (idcliente)
+);
+
+select * from cliente;
+
+truncate table cliente;
+truncate table compromisso;
+
+
+drop table cliente;
+drop table compromisso;
+
+
+
+
+create  table orcamento_pc(
+idorcamento bigint,
+cliente varchar(80),
+dataorcamento date,
+validade date,
+hora time,
+item1 varchar(30),
+item2 varchar(30),
+item3 varchar(30),
+item4 varchar(30),
+item5 varchar(30),
+item6 varchar(30),
+item7 varchar(30),
+item8 varchar(30),
+item9 varchar(30),
+item10 varchar(30),
+valor1 double,
+valor2 double,
+valor3 double,
+valor4 double,
+valor5 double,
+valor6 double,
+valor7 double,
+valor8 double,
+valor9 double,
+valor10 double,
+perclucro double,
+lucro double,
+total double,
+primary key (idorcamento)
+);
+
+select * from orcamento_pc;
+drop table orcamento_pc;
+
+describe  db_hefesto;
+
+
+
+
+truncate table orcamento_pc;
